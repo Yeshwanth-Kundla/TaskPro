@@ -1,0 +1,110 @@
+/* ================================
+   CSS RESET
+   ================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   THEME VARIABLES (BLACK + BLUE)
+   ================================ */
+:root {
+  --bg-main: #020617;          /* app background */
+  --bg-card: #0f172a;          /* cards */
+  --bg-input: #020617;
+
+  --blue-primary: #2563eb;
+  --blue-hover: #1d4ed8;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --border-dark: #1f2937;
+  --radius: 14px;
+}
+
+/* ================================
+   BASE BODY
+   ================================ */
+body {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+}
+
+/* ================================
+   LINKS
+   ================================ */
+a {
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   FORM ELEMENTS
+   ================================ */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  background: var(--bg-input);
+  color: var(--text-main);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--blue-primary);
+}
+
+/* ================================
+   BUTTON BASE
+   ================================ */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ================================
+   SCROLLBAR (Optional but nice)
+   ================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

@@ -1,0 +1,132 @@
+/* ================================
+   LOGIN CARD CONTAINER
+   ================================ */
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 32px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+
+  /* smooth hover */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  border-color: rgba(236, 72, 153, 0.6); /* pink border */
+
+  box-shadow:
+    0 0 0 1px rgba(236, 72, 153, 0.4),
+    0 0 18px rgba(236, 72, 153, 0.35),
+    0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ================================
+   LOGO & TEXT
+   ================================ */
+
+.login-card .logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-primary);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.login-card .subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* ================================
+   FORM
+   ================================ */
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card .form-field {
+  margin-bottom: 16px;
+}
+
+.login-card .form-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-dark);
+  color: var(--text-main);
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card .form-field input:focus {
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+.login-card .btn {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--blue-primary);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.login-card .btn:hover {
+  background: var(--blue-hover);
+}
+
+.login-card .btn:active {
+  transform: scale(0.98);
+}
+
+/* ================================
+   LINK
+   ================================ */
+
+.login-card .small-link {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.login-card .small-link a {
+  font-size: 13px;
+  color: #60a5fa;
+}
+
+.login-card .small-link a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+  .login-card {
+    margin: 40px 16px;
+    padding: 24px;
+  }
+
+  .login-card .logo {
+    font-size: 24px;
+  }
+}
+

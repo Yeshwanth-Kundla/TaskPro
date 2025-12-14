@@ -1,0 +1,11 @@
+# Backend
+target/
+application.properties
+
+# Frontend
+node_modules/
+build/
+
+# Common
+.env
+.DS_Store

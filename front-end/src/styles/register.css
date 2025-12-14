@@ -1,0 +1,135 @@
+/* ================================
+   REGISTER CARD CONTAINER
+   ================================ */
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 32px;
+
+  /* glass look */
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: var(--radius);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* pink hover glow (same as login) */
+.register-card:hover {
+  border-color: rgba(236, 72, 153, 0.6);
+  box-shadow:
+    0 0 0 1px rgba(236, 72, 153, 0.4),
+    0 0 18px rgba(236, 72, 153, 0.35),
+    0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ================================
+   LOGO & TEXT
+   ================================ */
+
+.register-card .logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-primary);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.register-card .subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* ================================
+   FORM
+   ================================ */
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-card .form-field {
+  margin-bottom: 16px;
+}
+
+.register-card .form-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-dark);
+  color: var(--text-main);
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-card .form-field input:focus {
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+.register-card .btn {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--blue-primary);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.register-card .btn:hover {
+  background: var(--blue-hover);
+}
+
+.register-card .btn:active {
+  transform: scale(0.98);
+}
+
+/* ================================
+   LINK
+   ================================ */
+
+.register-card .small-link {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.register-card .small-link a {
+  font-size: 13px;
+  color: #60a5fa;
+}
+
+.register-card .small-link a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+  .register-card {
+    margin: 40px 16px;
+    padding: 24px;
+  }
+
+  .register-card .logo {
+    font-size: 24px;
+  }
+}

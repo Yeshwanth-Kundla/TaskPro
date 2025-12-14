@@ -1,0 +1,171 @@
+/* ================================
+   BASE TASK CARD
+   ================================ */
+
+.task-cark {
+  position: relative;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid var(--border-dark);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ================================
+   PRIORITY GRADIENT LAYER
+   ================================ */
+
+.task-cark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.25;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* keep content above gradient */
+.task-cark h3,
+.task-cark p,
+.task-cark small,
+.task-meta {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================
+   PRIORITY GRADIENTS (NORMAL)
+   ================================ */
+
+/* 🟡 LOW — white → yellow */
+.task-cark.priority-LOW::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(250, 204, 21, 0.95)
+  );
+}
+
+/* 🟢 MEDIUM — yellow → green */
+.task-cark.priority-MEDIUM::before {
+  background: linear-gradient(
+    135deg,
+    rgba(250, 204, 21, 0.95),
+    rgba(34, 197, 94, 0.95)
+  );
+}
+
+/* 🔴 HIGH — green → red */
+.task-cark.priority-HIGH::before {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.95),
+    rgba(239, 68, 68, 0.95)
+  );
+}
+
+/* ================================
+   CARD HOVER (ALL)
+   ================================ */
+
+.task-cark:hover {
+  transform: translateY(-4px);
+}
+
+.task-cark:hover::before {
+  opacity: 0.45;
+}
+
+/* ================================
+   PRIORITY HOVER GLOWS
+   ================================ */
+
+/* 🔴 HIGH */
+.task-cark.priority-HIGH:hover {
+  box-shadow:
+    0 0 0 1px rgba(239, 68, 68, 0.4),
+    0 0 22px rgba(239, 68, 68, 0.35),
+    0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* 🟢 MEDIUM */
+.task-cark.priority-MEDIUM:hover {
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.4),
+    0 0 22px rgba(34, 197, 94, 0.35),
+    0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* 🟡 LOW */
+.task-cark.priority-LOW:hover {
+  box-shadow:
+    0 0 0 1px rgba(250, 204, 21, 0.4),
+    0 0 22px rgba(250, 204, 21, 0.35),
+    0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* ================================
+   TASK CARD ACTION BUTTONS
+   ================================ */
+
+.task-cark .btn.secondary {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+
+  background: rgba(2, 6, 23, 0.65);
+  color: var(--text-main);
+
+  border-radius: 8px;
+  border: 1px solid var(--border-dark);
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* ================================
+   EDIT BUTTON (FIRST)
+   ================================ */
+
+.task-cark .btn.secondary:first-child:hover {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(37, 99, 235, 0.6);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ================================
+   DELETE BUTTON (SECOND)
+   ================================ */
+
+.task-cark .btn.secondary:last-child:hover {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: rgba(239, 68, 68, 0.6);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ================================
+   ACTIVE PRESS FEEDBACK
+   ================================ */
+
+.task-cark .btn.secondary:active {
+  transform: scale(0.96);
+}
