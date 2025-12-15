@@ -53,9 +53,9 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         // Your React app uses PORT 5174
-        config.setAllowedOrigins(List.of("http://localhost:5174","https://taskpro-forntend.onrender.com"));
+        config.setAllowedOrigins(List.of("https://taskpro-forntend.onrender.com"));
 
-        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
+        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
 
