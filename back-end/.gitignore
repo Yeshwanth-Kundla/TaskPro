@@ -32,4 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 
-back-end\src\main\resources\application.properties
+back-end/.env
