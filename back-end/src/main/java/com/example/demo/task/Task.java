@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import com.example.demo.user.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-
+import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -16,6 +16,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
+@Table(name = "task")
 public class Task {
     
     @Id
